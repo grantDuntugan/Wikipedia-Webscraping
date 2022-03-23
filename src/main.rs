@@ -26,6 +26,10 @@ fn main() -> Result<(), Box<dyn std::error::Error>> {
     for node in document.find(Name("p")) {
         println!("{}", node.text());
     }
+
+    println!("Press ENTER to end...");
+    let mut enter = String::new();
+    io::stdin().read_line(&mut enter)?;
     
     Ok(())
 }
